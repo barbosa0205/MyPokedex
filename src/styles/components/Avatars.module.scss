@@ -1,0 +1,25 @@
+.container {
+  align-items: center;
+  background: var(--gray-light);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  max-width: 35rem;
+  padding: 3rem;
+  width: 95%;
+  & h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  & .avatars {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+    & .avatar {
+      cursor: pointer;
+    }
+  }
+}

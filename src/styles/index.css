@@ -1,0 +1,33 @@
+* {
+  --ruby: #e0112d;
+  --ruby-shadow: #b10e0e;
+  --gray: #e7e7e7;
+  --gray-light: #f8f8f8;
+  --light-shadow: #c9c9c9;
+  --shadow: #666666;
+  --dark-shadow: #333;
+  --dark-transparent: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+input {
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+}

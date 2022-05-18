@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  background-color: var(--ruby);
+  z-index: 9;
+}
+
+.menu_logo_container {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 100%;
+
+  & i {
+    font-size: 3rem;
+    margin: 0 0.5rem;
+  }
+
+  & svg {
+    border: 2px solid var(--gray-light);
+    border-radius: 50%;
+  }
+}
