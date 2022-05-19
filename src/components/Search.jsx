@@ -11,6 +11,7 @@ export const Search = () => {
   const [error, setError] = React.useState('')
   const [loading, setLoading] = React.useState(false)
   const fetchPokemon = async (search) => {
+    search = search.toLowerCase()
     try {
       const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${search}`)
       const pokemonData = await resp.json()
