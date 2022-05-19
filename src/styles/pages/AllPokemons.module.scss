@@ -1,5 +1,6 @@
 main {
   width: 100%;
+  min-height: 100vh;
 
   & .loading {
     display: flex;
@@ -44,5 +45,40 @@ main {
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--gray-dark);
+  }
+}
+
+@media (min-width: 600px) {
+  main {
+    max-width: 100rem;
+    margin: 0 auto;
+    & .pokeContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 1rem;
+
+      & .pokemonItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+          width: 15rem;
+          height: 15rem;
+          object-fit: contain;
+          margin: 0.5rem 0;
+        }
+      }
+    }
+
+    & .loading {
+      width: 60%;
+    }
+
+    & .btnContainer {
+      width: 60%;
+      margin: 0 auto;
+    }
   }
 }

@@ -14,20 +14,9 @@ export const Menu = ({ menu, setMenu }) => {
       className={`${styles.menuContainer} ${menu ? styles.open : styles.close}`}
     >
       <ListContainer>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'flex-end',
-            padding: '0.5rem',
-            borderBottom: '1px solid var(--light-shadow)',
-          }}
-        >
+        <div className={styles.close}>
           <Icon
             className='ri-close-line'
-            style={{
-              fontSize: '2rem',
-            }}
             onClick={() => {
               setMenu(!menu)
             }}

@@ -12,6 +12,7 @@ export const Logo = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        cursor: 'pointer',
       }}
       onClick={() => {
         navigate('/')

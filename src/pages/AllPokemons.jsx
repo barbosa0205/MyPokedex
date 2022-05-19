@@ -81,21 +81,23 @@ export const AllPokemons = () => {
                 }}
               />
             </div>
-            {pokemons.map((pokemon, index) => (
-              <article
-                key={index}
-                className={styles.pokemonItem}
-                onClick={() => {
-                  navigate(`/pokemon/${pokemon.id}`)
-                }}
-              >
-                <img
-                  src={pokemon.sprites.other.dream_world.front_default}
-                  alt={pokemon.name}
-                />
-                <p>{pokemon.name}</p>
-              </article>
-            ))}
+            <div className={styles.pokeContainer}>
+              {pokemons.map((pokemon, index) => (
+                <article
+                  key={index}
+                  className={styles.pokemonItem}
+                  onClick={() => {
+                    navigate(`/pokemon/${pokemon.id}`)
+                  }}
+                >
+                  <img
+                    src={pokemon.sprites.other.dream_world.front_default}
+                    alt={pokemon.name}
+                  />
+                  <p>{pokemon.name}</p>
+                </article>
+              ))}
+            </div>
             <div className={styles.btnContainer}>
               <Button
                 text={'Anterior'}

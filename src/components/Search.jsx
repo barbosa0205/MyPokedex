@@ -23,7 +23,7 @@ export const Search = () => {
 
   const validatePokemon = () => {
     if (!search.trim()) {
-      setError('Por favor ingrese un nombre de pokemon')
+      setError('Por favor ingrese un nombre de pokemon valido')
 
       return
     }
@@ -57,6 +57,7 @@ export const Search = () => {
                 }
               }}
             />
+            {error && <p className={styles.error}>{error}</p>}
           </div>
         </div>
       )}

@@ -7,6 +7,18 @@
   box-shadow: 1px 0px 5px var(--shadow);
   transition: 0.2s ease-in-out;
   z-index: 99;
+
+  & .close {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    & i {
+      font-size: 2rem;
+    }
+  }
+
   & .link {
     text-align: center;
     width: 100%;
@@ -28,6 +40,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    cursor: pointer;
   }
 }
 
@@ -37,4 +50,36 @@
 
 .open {
   right: 0;
+}
+
+@media (min-width: 600px) {
+  .menuContainer {
+    position: static;
+    height: min-content;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    & .close {
+      display: none;
+    }
+
+    & > ul {
+      min-height: 4rem;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & .link {
+        width: fit-content;
+      }
+    }
+
+    & .btnLogout {
+      top: 0;
+      right: 0;
+      width: fit-content;
+      & button {
+        font-size: 1.6rem;
+      }
+    }
+  }
 }

@@ -5,6 +5,7 @@
   padding: 0.5rem;
   border-radius: 1rem;
   background: var(--gray-light);
+  cursor: pointer;
   & > i {
     font-size: 2rem;
     color: var(--ruby);
@@ -29,7 +30,7 @@
   flex-direction: column;
   align-items: center;
   width: 95%;
-  height: 10rem;
+  min-height: 10rem;
   border-radius: 0.5rem;
   margin: 0 auto;
   max-width: 55rem;
@@ -39,5 +40,13 @@
   & p {
     font-size: 1.8rem;
     margin: 0.5rem 0;
+  }
+
+  & .error {
+    background: var(--ruby);
+    color: var(--gray-light);
+    border-radius: 0.5rem;
+    padding: 0 0.5rem;
+    margin: 1rem 0 0 0;
   }
 }

@@ -24,3 +24,15 @@
     border-radius: 50%;
   }
 }
+
+@media (min-width: 600px) {
+  .navbar {
+    justify-content: space-evenly;
+  }
+
+  .menu_logo_container {
+    & > i {
+      display: none;
+    }
+  }
+}
