@@ -57,14 +57,14 @@ export const Pokemon = () => {
                   margin: '0 1rem',
                 }}
               >
-                Peso: {pokemon.weight * 0.1} KG
+                Peso: {Math.floor(pokemon.weight * 0.1)} KG
               </p>
               <p
                 style={{
                   margin: '0 1rem',
                 }}
               >
-                Altura: {(pokemon.height * 10 * 1) / 100} M
+                Altura: {Math.floor((pokemon.height * 10 * 1) / 100)} M
               </p>
             </div>
             <p
