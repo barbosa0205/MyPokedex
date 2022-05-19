@@ -4,8 +4,10 @@ import styles from '../styles/components/RandomPokemon.module.scss'
 
 import loadingImg from '../assets/loading2.gif'
 import { Button } from './Button'
+import { useNavigate } from 'react-router-dom'
 
 export const RandomPokemon = () => {
+  const navigate = useNavigate()
   const [pokemon, setPokemon] = React.useState(null)
   const [loading, setLoading] = React.useState(false)
 
@@ -45,6 +47,9 @@ export const RandomPokemon = () => {
             {pokemon && (
               <>
                 <img
+                  onClick={() => {
+                    navigate('/pokemon/' + pokemon.id)
+                  }}
                   src={pokemon.sprites.other.dream_world.front_default}
                   alt=''
                 />
