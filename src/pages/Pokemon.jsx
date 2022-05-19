@@ -25,7 +25,7 @@ export const Pokemon = () => {
       setLoading(true)
       const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
       const pokemonData = await resp.json()
-      console.log(pokemonData)
+
       setPokemon(pokemonData)
       setLoading(false)
     } catch (error) {

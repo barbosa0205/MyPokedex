@@ -25,7 +25,7 @@ export const Search = () => {
     } catch (error) {
       setLoading(false)
       setError('No se encontró el pokemon')
-      return
+      return 'No se encontró el pokemon'
     }
   }
 
@@ -37,7 +37,7 @@ export const Search = () => {
       return
     }
 
-    const poke = fetchPokemon(search)
+    fetchPokemon(search)
   }
 
   return (
