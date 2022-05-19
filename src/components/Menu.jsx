@@ -25,7 +25,7 @@ export const Menu = ({ menu, setMenu }) => {
         <Link
           to='/all-pokemons'
           className={styles.link}
-          onClick={() => setMenu(!menu)}
+          onClick={() => setMenu(false)}
         >
           Todos los pokemón
         </Link>
