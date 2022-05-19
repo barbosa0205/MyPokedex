@@ -11,22 +11,27 @@ export const Welcome = () => {
   const [error, setError] = useState('')
 
   const handleSubmit = (e) => {
+    // se previene el comportamiento por defecto del formulario
     e.preventDefault()
+
+    // si el username esta vacio o es menor a 3 caracteres se muestra un error
     if (!username || username.length < 3) {
       setError('El nombre de usuario debe tener al menos 3 caracteres')
       return
     }
+    // si no hay error se guarda el username en el localStorage
     localStorage.setItem('pokeUsername', username)
     navigate('/')
     setError('')
   }
-
+  // se ejecuta cada que hay un cambio en el username
   const handleInputChange = (e) => {
     const { value } = e.target
     setUsername(value.trim())
   }
 
   useEffect(() => {
+    // el usuario ya esta logueado lo redirige a la pantalla principal
     if (localStorage.getItem('pokeUsername')) {
       navigate('/')
     }

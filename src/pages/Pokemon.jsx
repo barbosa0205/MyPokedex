@@ -19,6 +19,7 @@ export const Pokemon = () => {
     }
   }, [])
 
+  //obteniendo el pokemon por id
   const getPokemonData = async (id) => {
     try {
       setLoading(true)

@@ -8,6 +8,7 @@ import styles from '../styles/pages/Home.module.scss'
 export const Home = () => {
   const navigate = useNavigate()
   useEffect(() => {
+    //si no hay usuario logeado redirige a la pantalla de bienvenida
     if (!localStorage.getItem('pokeUsername')) {
       navigate('/welcome')
     }

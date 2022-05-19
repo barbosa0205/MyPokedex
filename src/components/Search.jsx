@@ -10,14 +10,19 @@ export const Search = () => {
   const [open, setOpen] = React.useState(false)
   const [error, setError] = React.useState('')
   const fetchPokemon = async (search) => {
-    const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${search}`)
-    const pokemonData = await resp.json()
-    if (pokemonData.name) {
-      setOpen(false)
-      navigate(`pokemon/${pokemonData.id}`, {
-        replace: true,
-      })
-      navigate(0)
+    try {
+      const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${search}`)
+      const pokemonData = await resp.json()
+      if (pokemonData.name) {
+        setOpen(false)
+        navigate(`pokemon/${pokemonData.id}`, {
+          replace: true,
+        })
+        navigate(0)
+      }
+    } catch (error) {
+      setError('No se encontró el pokemon')
+      return
     }
   }
 
@@ -27,6 +32,7 @@ export const Search = () => {
 
       return
     }
+
     const poke = fetchPokemon(search)
   }
 
