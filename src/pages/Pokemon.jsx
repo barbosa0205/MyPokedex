@@ -58,14 +58,14 @@ export const Pokemon = () => {
                   margin: '0 1rem',
                 }}
               >
-                Peso: {Math.ceil(pokemon.weight * 0.1)} KG
+                Peso: {(pokemon.weight * 0.1).toFixed(2)} KG
               </p>
               <p
                 style={{
                   margin: '0 1rem',
                 }}
               >
-                Altura: {Math.ceil((pokemon.height * 10 * 1) / 100)} M
+                Altura: {((pokemon.height * 10 * 1) / 100).toFixed(2)} M
               </p>
             </div>
             <p
