@@ -9,11 +9,13 @@ export const Search = () => {
   const [search, setSearch] = React.useState('')
   const [open, setOpen] = React.useState(false)
   const [error, setError] = React.useState('')
+  const [loading, setLoading] = React.useState(false)
   const fetchPokemon = async (search) => {
     try {
       const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${search}`)
       const pokemonData = await resp.json()
       if (pokemonData.name) {
+        setLoading(false)
         setOpen(false)
         navigate(`pokemon/${pokemonData.id}`, {
           replace: true,
@@ -21,12 +23,14 @@ export const Search = () => {
         navigate(0)
       }
     } catch (error) {
+      setLoading(false)
       setError('No se encontró el pokemon')
       return
     }
   }
 
   const validatePokemon = () => {
+    setLoading(true)
     if (!search.trim()) {
       setError('Por favor ingrese un nombre de pokemon valido')
 
@@ -63,6 +67,7 @@ export const Search = () => {
                 }
               }}
             />
+            {loading && <p>CARGANDO...</p>}
             {error && <p className={styles.error}>{error}</p>}
           </div>
         </div>
