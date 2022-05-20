@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import logo from './logo.svg'
+
 import './styles/App.css'
 import { AppRouter } from './routers/AppRouter'
 
